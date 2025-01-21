@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Happy birthday</title>
+
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space" /><span class="comments">*Happy 18th Birthday</span><br />
+				<span class="space" /><span class="comments">*/</span><br />
+				My little Beanz!, <br />
+				<br>
+				 I can't believe you are finally 18 now, Happy birthday Julie ❤️.<br />
+				 It's cute you are not a beanz anymore but a little sprout 🌱 and i know you'll grow and become a beautiful and amazing tree😭🌳<br />
+				<span class="comments">//  but for me you'll always be my little beanz an innocent yet not so innocent and really curious little baby. I don't believe you will finally be an adult which I'm happy about and not so happy about as you won't be my illegal fucktoy anymore,</span><br />
+				my brain still thinks you as a 17y/o curious latina I met few days ago a funny, cool and savage girl who says and do things so unpredictable that amaze me and makes me feel happy but damnn it's been more than 7months with you. <br />
+				You don't know how much you mean to me...you don't know how much I adore you <br />
+				<span class="comments">// (it made my eyes wet I'm thinking about past and all the things we did together like gaming and watching stuffs together and how you were watching me play 'tlou' from starting to last)</span><br />
+				I can't just describe how much this all means to me. Ohh Vanessaa i just wanna hug you so tightly right now.<br />
+				<br>
+				<br>
+				You know right you are my bestfriend and my soulmate .... My someone who is a  part of me and someone who makes me myself . <br />
+				I'm grateful to have you in my life, I'm dammnnn lucky to have you in my life, thank you for everything my baby my little lady I love you soo much and once again HAPPY BIRTHDAY JULIETH ❤️<br />
+				<br>
+				<br>
+				With Love For Love..<br />
+				<br>
+				    - Ayan
+				<span id="heartspan">
+					<!-- <a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a> -->
+				</span>
+			</div>
+			<!-- <div id="loveHeart"> -->
+			<canvas id="garden"></canvas>
+			 <!-- <div id="words">
+				<div id="messages">
+					वर्षा ऋतु FOREVER
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU SO MUCH<br/>
+					<div class="signature">- RITVIK</div>
+				</div>
+			</div> -->
+		</div>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2016, 8, 5);
+		together.setHours(16);
+		together.setMinutes(30);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+
+</html>
